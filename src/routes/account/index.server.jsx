@@ -30,6 +30,11 @@ export default function Account({response}) {
   } = useLocalization();
   const {customerAccessToken} = useSession();
 
+  console.log("successful log");
+  const x = undefined.y+2; // undefined
+  throw new Error('new error../'); // explicit throw
+
+
   if (!customerAccessToken) return response.redirect('/account/login');
 
   const {data} = useShopQuery({

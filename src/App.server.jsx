@@ -19,10 +19,6 @@ function App({request}) {
   const localeMatch = /^\/([a-z]{2})(\/|$)/i.exec(pathname);
   const countryCode = localeMatch ? localeMatch[1] : undefined;
 
-  console.log("all the good stuff");
-  const x = undefined.y+2; // undefined
-  throw new Error('new error../'); // explicit throw
-
   const isHome = pathname === `/${countryCode ? countryCode + '/' : ''}`;
 
   return (
